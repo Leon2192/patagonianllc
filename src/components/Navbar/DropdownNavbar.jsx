@@ -12,25 +12,25 @@ const DropdownNavbar = () => {
     return (
         <nav className='bg-white'>
             <div className='flex items-center font-medium justify-around '>
-                <div className='z-50 p-5 md:w-auto w-full flex justify-between'>
+                <div className='z-50 p-5 xl:w-auto w-full flex justify-between'>
                     <Link to={'/'}>
-                        <img src={`${process.env.PUBLIC_URL}/Brand/logo.png`} alt="" className='md:cursor-pointer md:h-16 h-12' />
+                        <img src={`${process.env.PUBLIC_URL}/Brand/logo.png`} alt="" className='xl:cursor-pointer md:h-16 h-12' />
                     </Link>
-                    <div className='text-3xl md:hidden' onClick={() => setOpen(!open)}>
+                    <div className='text-3xl xl:hidden' onClick={() => setOpen(!open)}>
                         {open ? <IoMdClose /> : <IoMenu />}
                     </div>
                 </div>
-                <ul className='md:flex hidden uppercase items-center gap-8'>
+                <ul className='xl:flex hidden uppercase items-center gap-8'>
                     <NavLinks />
                 </ul>
 
-                <div className='md:block hidden'>
+                <div className='xl:block hidden'>
                     <Button />
                 </div>
 
                 {/*Mobile */}
                 <ul className={`
-                md:hidden bg-white absolute w-full h-full bottom-0 py-24 pl-4
+                xl:hidden bg-white absolute w-full h-full bottom-0 py-24 pl-4
                 duration-500 ${open ? 'left-0' : 'left-[-100%]'}
                 `}>
                     <NavLinks />
